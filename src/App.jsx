@@ -1,4 +1,5 @@
 import './App.css'
+
 function App() {
   return (
     <div className="container">
@@ -9,8 +10,8 @@ function App() {
         </div>
         <div className="buttons">
           <div>
-            <button id="reset" ><i className="fa fa-refresh"></i></button>
-            <button id="backspace"><i className='fa fa-arrow-left'></i></button>
+            <button id="reset" >AC</button>
+            <button id="backspace">DEL</button>
             <button>%</button>
             <button>÷</button>
           </div>
