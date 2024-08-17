@@ -13,3 +13,8 @@
   background-color: antiquewhite;
 }
 
+.calculator{
+  padding : 20px;
+  border-radius: 16px;
+  background-color: rgb(246, 170, 170);
+}
