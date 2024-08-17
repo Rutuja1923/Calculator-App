@@ -4,6 +4,7 @@ import './App.css'
 function App() {
   const [input,setInput] =useState('');
   const [result,setResult]=useState('');
+  const [history, setHistory] = useState([]);
 
   const handleClick = (value) => {
     setInput(input+value);
@@ -27,13 +28,17 @@ function App() {
       }
       else{
         setResult(calcResult);
+        setHistory((prevHistory) => [...prevHistory, `${input} = ${calcResult}`]);
       }
     } 
     catch (e){
       setResult("Error");
       console.log(e.message);
     }
-  }
+  };
+  const clearHistory = () => {
+    setHistory([]);
+  };
   return (
     <>
     <h1 id="title">Calculator</h1>
@@ -73,6 +78,15 @@ function App() {
           <button onClick={() => handleClick('.')}>.</button>
           <button id="eval" onClick={handleCalculate}>=</button>
         </div>
+      </div>
+      <div className="history">
+        <h3>History</h3>
+        <ul>
+          {history.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+        <button onClick={clearHistory}>Clear History</button>
       </div>
     </div>
     </>
