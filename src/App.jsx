@@ -36,6 +36,13 @@ function App() {
       console.log(e.message);
     }
   };
+  const showHistory=()=>{
+    <ul>
+      {history.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  }
   const clearHistory = () => {
     setHistory([]);
   };
@@ -80,13 +87,9 @@ function App() {
         </div>
       </div>
       <div className="history">
-        <h3>History</h3>
-        <ul>
-          {history.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-        <button onClick={clearHistory}>Clear History</button>
+
+        <button id="show-history" onClick={showHistory} >History</button>
+        <button id="clear-history" onClick={clearHistory}>Clear</button>
       </div>
     </div>
     </>

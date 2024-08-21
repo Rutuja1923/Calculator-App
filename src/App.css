@@ -12,10 +12,10 @@ body {
   text-align:center;
   color:rgb(10, 102, 102);
   padding:10px;
-  margin:10px;
-  margin-top: 0px;
+  padding-bottom: 0px;
 }
 .calculator {
+    margin-top:0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,16 +27,16 @@ body {
 }
 .screen {
   width: 45vh;
-  background-color: #12363a;
+  background-color: rgb(5, 106, 106);
   color: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  min-height: 100px;
+  min-height: 80px;
   font-size: 24px;
   word-wrap: break-word;
   word-break: break-all;
@@ -51,8 +51,9 @@ button{
   padding: 20px;
   margin: 5px;
   font-weight: bold;
-  font-size: larger;
+  font-size: large;
   text-align: center;
+  justify-content: center;
   border: 2px solid rgb(5, 106, 106);
   border-radius: 6px;
   background-color: beige;
@@ -65,10 +66,56 @@ button:hover {
 }
 #backspace{
   background-color: rgb(249, 191, 191);
+  border: 2px solid rgb(254, 135, 155);
+}
+#backspace:hover{
+  box-shadow: 5px 8px 8px rgb(240, 153, 162);
 }
 #reset{
   background-color: rgb(197, 251, 182);
+  border: 2px solid rgb(81, 252, 81);
+}
+#reset:hover{
+  box-shadow: 5px 8px 8px rgb(198, 254, 166);
 }
 #eval{
   background-color: rgb(204, 204, 254) ;
+  border: 2px solid rgb(125, 125, 246);
 }
+#eval:hover{
+  box-shadow:5px 8px 8px rgb(159, 159, 244);
+}
+.history{
+  width:45vh;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  gap:50px;
+  margin:5px;
+  margin-bottom: 0px;
+}
+
+#show-history ,
+#clear-history{
+  width: 100px;
+  height: 60px;
+}
+
+#show-history{
+  background-color: rgb(242, 191, 226);
+  border: 2px solid rgb(253, 112, 218);
+}
+#show-history:hover{
+  background-color: pink;
+  box-shadow: 5px 8px 8px rgb(250, 154, 237);
+}
+#clear-history{
+  background-color: rgb(244, 250, 155);
+  border: 2px solid rgb(204, 204, 5);
+}
+#clear-history:hover{
+  background-color: rgb(234, 234, 155);
+  box-shadow: 5px 8px 8px rgb(190, 183, 132);
+}
+
